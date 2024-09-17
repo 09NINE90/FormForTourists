@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма заявок</title>
+  <meta th:name="_csrf" th:content="${_csrf.token}"/>
+  <meta th:name="_csrf_header" th:content="${_csrf.headerName}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+<body>
+<div class="request-form">
+  <div class="content">
+    <h2>Форма заявки</h2>
+    <form class="form">
+
+      <div class="inputBox">
+        <input type="date" id="start-date" name="startDate" required>
+        <i>Дата начала отпуска</i>
+      </div>
+
+      <div class="inputBox">
+        <input type="number" id="number-of-adults" name="numberOfAdults" min="1" required>
+        <i>Количество взрослых</i>
+      </div>
+
+      <div class="inputBox">
+        <input type="number" id="number-of-children" name="numberOfChildren" min="0" required>
+        <i>Количество детей</i>
+      </div>
+      <div class="inputBox" id="age-of-children-box" style="display: none">
+        <input type="text" id="age-of-children" name="ageOfChildren" required>
+        <i>Возраст детей (через запятую)</i>
+      </div>
+      <div class="inputBox">
+        <input type="number" id="number-of-nights" name="numberOfNights" min="1" required>
+        <i>Количество ночей</i>
+      </div>
+
+      <div class="inputBox">
+        <input type="number" id="budget" name="budget" required>
+        <i>Ваш бюджет (руб.)</i>
+      </div>
+
+      <div class="inputBox">
+        <textarea id="preferences" name="preferences" placeholder="Дополнительные пожелания:"></textarea>
+      </div>
+
+      <div class="inputBox" >
+
+        <input  type="submit" id="request-btn" value="Отправить заявку">
+
+      </div>
+    </form>
+  </div>
+</div>
+
+<script th:src="@{/js/form-phone-number.js}"></script>
+<script th:src="@{/js/form-request.js}"></script>
+
+</body>
+</html>

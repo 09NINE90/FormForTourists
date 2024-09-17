@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Вход</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+<body>
+<div class="request-form">
+
+  <div class="content">
+
+    <h2>вход</h2>
+    <form class="form" th:action="@{/user/login}" method="post">
+
+      <div class="inputBox">
+
+        <input type="text" name = "username" required><i>Логин</i>
+
+      </div>
+
+      <div class="inputBox">
+
+        <input type="password" name = "password"  required><i>Пароль</i>
+
+      </div>
+      <div class="inputBox">
+
+        <input id = "entry-btn" type="submit" value="войти">
+
+      </div>
+
+      <div class="inputBox">
+        <a href="/grand_tour/user/getSignupForm"><input type="button" value="создать аккаунт"></a>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Заявки</title>
+  <meta th:name="_csrf" th:content="${_csrf.token}"/>
+  <meta th:name="_csrf_header" th:content="${_csrf.headerName}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<div class="profile">
+  <div class="table-container" id="table-container"></div>
+  <script th:src="@{/js/page-requests.js}"></script>
+</div>
+</body>
+</html>

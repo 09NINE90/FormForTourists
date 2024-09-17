@@ -1,0 +1,37 @@
+server:
+  port: 8010
+  servlet:
+    context-path: /grand_tour
+spring:
+  application:
+    name: FormForTourists
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: razumofftraining@gmail.com
+    password: ksboyinvxgenjlss
+    properties:
+      mail:
+        debug: false
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+bot:
+  token: 7065038996:AAFNrDTwmMRtwHlVXklZLRP5QWXB8shtL6o
+  username: ClientsTravelBot

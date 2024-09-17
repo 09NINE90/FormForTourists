@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color-bg: #FF9B00;
+    --color-bg-form: #222;
+    --color-primary: #FF9B00;
+    --color-text: #ffffff;
+    --color-input: #333;
+    --color-i: #aaa;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--color-bg);
+}
+
+.request-form
+{
+    position: absolute;
+    width: 400px;
+    background: var(--color-bg-form);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+
+.request-form .content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.request-form .content h2
+{
+    font-size: 2em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.request-form .content .form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.request-form .content .form .inputBox
+{
+    position: relative;
+    width: 100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.request-form .content .form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    background: var(--color-input);
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.request-form .content .form .inputBox textarea
+{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    background: var(--color-input);
+    overflow: hidden;
+    border: none;
+    outline: none;
+    padding: 7px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+.request-form .content .form .inputBox i
+{
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: var(--color-i);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.request-form .content .form .inputBox input:focus ~ i,
+.request-form .content .form .inputBox input:valid ~ i
+{
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: var(--color-text);
+}
+
+.request-form .content .form .inputBox input[type="submit"]
+{
+    padding: 10px;
+    background: var(--color-primary);
+    text-transform: uppercase;
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: 1.35em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    opacity: 0.6;
+}
+input[type="submit"]:active
+{
+    opacity: 0.6;
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&amp;amp;amp;amp;amp;amp;display=swap');
+
+:root{
+    --color-bg: #FF9B00;
+    --color-bg-form: #222;
+    --color-bg-table: #ececec;
+    --color-text: #ffffff;
+    --color-input: #333;
+    --color-table-text: #000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    font-family: Hack, monospace;
+    background: var(--color-bg);
+}
+.profile{
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 50px;
+    padding-inline: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 87%;
+    background: var(--color-bg-form);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgb(0, 0, 6);
+
+}
+
+.profile table{
+    color: var(--color-table-text);
+    padding-top: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.profile th {
+    font-size: 14px;
+    font-weight: normal;
+    background: var(--color-bg-table);
+    border-top: 1px solid;
+    /*border-bottom: 1px solid #ece3e3;*/
+    color: var(--color-table-text);
+    padding: 8px;
+}
+
+.profile td {
+    word-wrap: break-word;
+    background: var(--color-bg-table);
+    /*border-bottom: 1px solid white;*/
+    color: var(--color-table-text);
+    border-top: 1px solid;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-inline: 5px;
+}

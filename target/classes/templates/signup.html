@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+<body>
+  <div class="request-form">
+
+    <div class="content">
+
+      <h2>регистрация</h2>
+      <form class="form" th:action="@{/user/create}" th:object="${user}" method="post">
+
+        <div class="inputBox">
+          <input type="text" th:field="*{name}" id="name" name = "firstname"  required><i>Имя</i>
+        </div>
+
+        <div class="inputBox">
+          <input type="text" th:field="*{lastName}" id="last-name" name="lastName" required>
+          <i>Фамилия</i>
+        </div>
+
+        <div class="inputBox">
+          <input type="text" th:field="*{patronymic}" id="patronymic" name="patronymic" required>
+          <i>Отчество</i>
+        </div>
+
+        <div class="inputBox">
+          <input type="email" th:field="*{email}" id="email" name="email" required>
+          <i>Email</i>
+        </div>
+
+        <div class="inputBox">
+          <input type="tel" th:field="*{phoneNumber}" id="phone-number" name="phoneNumber" required>
+          <i>Телефон</i>
+        </div>
+
+        <div class="inputBox">
+          <input type="password" th:field="*{password}" id="password" name="password" required>
+          <i>Придумайте пароль</i>
+        </div>
+
+        <div class="inputBox">
+          <input type="password" th:field="*{confirmPassword}" id="confirm-password" name="confirm-password" required>
+          <i>Повторите пароль</i>
+        </div>
+        <div class="inputBox">
+          <input type="submit" id="signup-btn" value="зарегистрироваться">
+        </div>
+
+        <div class="inputBox">
+          <a href="/grand_tour/user/login"><input type="button" value="войти"></a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <script th:src="@{/js/auth-form.js}"></script>
+  <script th:src="@{/js/form-phone-number.js}"></script>
+
+</body>
+</html>

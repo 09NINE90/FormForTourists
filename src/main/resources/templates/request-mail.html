@@ -1,0 +1,45 @@
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title>Спасибо, ${name}</title>
+  <style>
+    #body {
+      display: flex;
+      flex-direction: column;
+      font-family: "Segoe UI", sans-serif;
+      align-items: center;
+      background-color: #FF9B00;
+      font-size: 15px;
+      height: 100%;
+    }
+    #div {
+      display: block;
+      flex-direction: column;
+      margin: 10%;
+      font-family: "Segoe UI", serif;
+      background-color: #333333;
+      padding: 3%;
+      border-radius: 20px;
+      color: #ffffff;
+    }
+
+    #a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div id="body">
+  <div id="div">
+    <h1 style="text-align: center">Новая заявка!</h1>
+    <p>Клиент - ${lastName} ${name} ${patronymic}</p>
+    <p>Номер телефона <a href="tel:${phoneNumber}">${phoneNumber}</a></p>
+    <p>Пожелания об отпуске: <br> ${preferences}</p>
+    <p>Бюджет: ${budget} рублей</p>
+    <p>Предполагаемая дата: ${startDate}</p>
+    <p>Количество взрослых: ${numberOfAdults}</p>
+    <p>Дети (возраст/без детей): ${children}</p>
+  </div>
+</div>
+</body>
+</html>
